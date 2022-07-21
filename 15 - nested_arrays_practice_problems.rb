@@ -1,7 +1,41 @@
 #  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
 #     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
 
-# array = ["a", "b", "c", "d"]
+array = ["a", "b", "c", "d"]
+
+def double_up(array)
+
+  i = 0
+  j = 0
+  out_array = []
+  while i < array.length
+    while j < array.length
+      if i != j
+        out_array << "#{array[i]}#{array[j]}"
+      end
+      j += 1
+    end
+    i += 1
+    j = 0
+  end
+
+  return out_array
+
+end
+
+
+
+p double_up(array)
+
+
+
+
+
+
+
+
+
+
 
 # index = 0
 # out_array = []
