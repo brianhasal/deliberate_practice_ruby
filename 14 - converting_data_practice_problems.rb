@@ -16,6 +16,22 @@
 #  6. Convert an array of strings into a hash with keys for each string in the array and values for the number of times the string appears in the array.
 #     For example, ["do", "or", "do", "not"] becomes {"do" => 2, "or" => 1, "not" => 1}.
 
+array = ["do", "or", "do", "not"]
+
+def string_counter(array)
+  out_hash = Hash.new
+  array.each do |word|
+    if out_hash.key?(word)
+      out_hash[word] = (out_hash[word] + 1)
+    else
+      out_hash[word] = 1
+    end
+  end
+  return out_hash
+end
+
+p string_counter(array)
+
 #  7. Convert a hash into a flat array containing all the hash’s keys and values.
 #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
 
@@ -57,19 +73,19 @@
 #  1. Convert an array of arrays into a hash.
 #     For example, [[1, 3], [8, 9], [2, 16]] becomes {1 => 3, 8 => 9, 2 => 16}.
 
-array = [[1, 3], [8, 9], [2, 16]]
+# array = [[1, 3], [8, 9], [2, 16]]
 
 
-def array_hasher(array)
+# def array_hasher(array)
 
-  out_hash = Hash.new
-  array.each do |key, value|
-    out_hash[key] = value
-  end
-  return out_hash
-end
+#   out_hash = Hash.new
+#   array.each do |key, value|
+#     out_hash[key] = value
+#   end
+#   return out_hash
+# end
 
-p array_hasher(array)
+# p array_hasher(array)
 
 
 #  2. Convert an array of hashes into a hash using the :id key from the array's hashes as the keys in the new hash.
