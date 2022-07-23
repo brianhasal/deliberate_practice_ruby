@@ -20,6 +20,21 @@
 #  7. Use a nested loop with an array of numbers to compute an array with every combination of products from each number.
 #     For example, [2, 8, 3] becomes [4, 16, 6, 16, 64, 24, 6, 24, 9].
 
+array = [2, 8, 3]
+
+
+def products(array)
+  out_array = []
+  array.each do |root_no|
+    array.each do |curr_no|
+      out_array << root_no * curr_no
+    end
+  end
+  return out_array
+end
+
+# p products(array)
+
 #  8. Use a nested loop to find the largest sum of any two different numbers within an array.
 #     For example, [1, 8, 3, 10] becomes 18.
 
