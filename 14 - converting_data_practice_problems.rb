@@ -7,6 +7,24 @@
 #  3. Convert a string into a hash with keys for each letter in the string and values for the number of times the letter appears in the string.
 #     For example, "bookkeeper" becomes {"b" => 1, "o" => 2, "k" => 2, "e" => 3, "p" => 1, "r" => 1}.
 
+string = "bookkeeper"
+
+def l_counter(string)
+  out_hash = Hash.new
+  array = string.each_char.to_a
+  array.each do |letter|
+    if out_hash[letter]
+      out_hash[letter] += 1
+    else
+      out_hash[letter] = 1
+    end
+  end
+  return out_hash
+end
+
+p l_counter(string)
+
+
 #  4. Convert a hash into an array of arrays.
 #     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
 
@@ -48,7 +66,7 @@ def hash_flattener(hash)
   return out_array
 end
 
-p hash_flattener(hash)
+# p hash_flattener(hash)
 
 #  8. Combine data from a hash with names and prices and an array of hashes with names, colors, and weights to make a new hash.
 #     For example, {"chair" => 75, "book" => 15} and [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}] becomes {"chair" => {price: 75, color: "red", weight: 10}, "book" => {price: 15, color: "black", weight: 1}}.
