@@ -2,25 +2,43 @@
 
 # NOTE: Do not use any built-in language functions that do this automatically for you.
 
-# Input: [1, 2, 3, 4]
+input = [1, 2, 3, 4]
 # Output: 10
 
 # Explanation: (1 + 2 + 3 + 4) = 10
-
 # Activity
 
+def summer(array)
+  total = 0
+  array.each do |number|
+    total += number
+  end
+  return total
+end
+
+# p summer(input)
 
 
-# Select: Less Than 100
-# in list Basic Array
-# Description
+
+
+
+# Select: Less Than 10 in list Basic Array Description
 # Given an array of numbers, write a function that returns a new array that contains all numbers from the original array that are less than 100.
 
-# Input: [99, 101, 88, 4, 2000, 50]
+input = [99, 101, 88, 4, 2000, 50]
 # Output: [99, 88, 4, 50]
 
+def less_than(array)
+  out_array = []
+  array.each do |number|
+    if number < 100
+      out_array << number
+    end
+  end
+  return out_array
+end
 
-
+p less_than(input)
 
 
 
