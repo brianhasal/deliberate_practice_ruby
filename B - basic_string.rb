@@ -6,9 +6,11 @@
 
 # Write a function that returns the reverse of a given string.
 
-# Input: “abcde”
+input = "abcde"
 # Output: “edcba”
 
+input = input.reverse
+# p input
 
 
 
@@ -17,14 +19,23 @@
 # Description
 # Given a string, write a function that returns true if the “$” character is contained within the string or false if it is not.
 
-# Input: “i hate $ but i love money i know i know im crazy”
+input = "i hate $ but i love money i know i know im crazy"
 # Output: true
 
-# Input: “abcdefghijklmnopqrstuvwxyz”
+input_a =  "abcdefghijklmnopqrstuvwxyz"
 # Output: false
 
+def money_finder(string)
+  string.each_char do |char|
+    if char == "$"
+      return true
+    end
+  end
+  return false
+end
 
-
+# p money_finder(input)
+# p money_finder(input_a)
 
 
 # Alternate Capitals
