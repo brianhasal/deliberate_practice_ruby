@@ -6,6 +6,22 @@
 
 
 
+# 6n + 1 or 6n – 1
+
+# def is_prime(number)
+#   primes = []
+#   core_5 = [2, 3, 5, 7, 11]
+
+
+
+# end
+
+
+
+
+
+
+
 
 # Fizzbuzz
 # in list Basic Numbers
@@ -27,10 +43,38 @@
 
 # 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, and so on until infinity...
 
-# Input: 9
+input = 9
 # Output: 21 (as this is the 9th number of the Fibonacci Sequence)
 
+def fibonacci_2(count)
+  fib_array = [0, 1]
+  if count <= 1
+    return count
+  else
+    i = 0
+    total = 0
+    (count - 1).times do
+      fib_array << fib_array[i] + fib_array[i + 1]
+      i += 1
+    end
+    return fib_array[-1]
+  end
 
+
+end
+
+p fibonacci_2(20)
+
+
+def fibonacci(count)
+  if count <= 1
+    return count
+  else
+    return fibonacci(count - 1) + fibonacci(count - 2)
+  end
+end
+
+p fibonacci(20)
 
 
 
