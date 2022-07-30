@@ -38,7 +38,7 @@ def less_than(array)
   return out_array
 end
 
-p less_than(input)
+# p less_than(input)
 
 
 
@@ -47,10 +47,14 @@ p less_than(input)
 # Description
 # Given an array of numbers, write a function that returns a new array whose values are the original array’s value doubled.
 
-# Input: [4, 2, 5, 99, -4]
+input = [4, 2, 5, 99, -4]
 # Output: [8, 4, 10, 198, -8]
 
+def doubler(array)
+  return array.map {|num| num * 2}
+end
 
+p doubler(input)
 
 
 
