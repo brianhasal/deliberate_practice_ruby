@@ -6,12 +6,30 @@
 
 # Given a string, find the most commonly occurring letter.
 
-# Input: “peter piper picked a peck of pickled peppers”
+input =  "peter pieper picfffffffffked a peck of pickled peppers"
 # Output: “p”
 
+def most_frequent(string)
+  most_occurring_letter_count = 0
+  high_letter = ""
+  out_hash = Hash.new
+  string.each_char do |char|
+    if out_hash.has_key?(char)
+      out_hash[char] += 1
+    else
+      out_hash[char] = 1
+    end
+  end
+  out_hash.each do |key, value|
+    if value > most_occurring_letter_count
+      most_occurring_letter_count = value
+      high_letter = key
+    end
+  end
+  return high_letter
+end
 
-
-
+# p most_frequent(input)
 
 # Count Votes
 # in list Basic Hash
