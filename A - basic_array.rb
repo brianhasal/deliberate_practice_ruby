@@ -54,7 +54,7 @@ def doubler(array)
   return array.map {|num| num * 2}
 end
 
-p doubler(input)
+# p doubler(input)
 
 
 
