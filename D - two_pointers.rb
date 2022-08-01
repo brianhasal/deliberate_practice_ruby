@@ -30,10 +30,26 @@
 # Description
 # Find the largest product of any two numbers within a given array.
 
-# Input: [5, -2, 1, -9, -7, 2, 6]
+input = [5, -2, 1, 9, -7, 2, 6]
 # Output: 63 (-9 * -7)
 
+def largest_product(array)
+  i = 0
+  highest_no = array[0]
+  while i <= array.length - 2
+    array.each do |num|
+      unless i == array.index(num)
+        if num * array[i] > highest_no
+          highest_no = num * array[i]
+        end
+      end
+    end
+    i += 1
+  end
+  return highest_no
+end
 
+# p largest_product(input)
 
 
 # Two Sum I
