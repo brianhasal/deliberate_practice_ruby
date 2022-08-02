@@ -1,22 +1,36 @@
 
-# VIDEO: Array Intersection
-# in list From Brute to Linear
-# Description
-# VIDEO: Think Like a Software Engineer Episode #34
+# Array Intersection
 
 # Given two arrays, return a new array that contains the intersection of the two arrays. The intersection means the values that are contained in both of the arrays. Do not use the "&", or any built-in intersection methods.
 
 # NOTE: You must accomplish this in O(n) time. This is also known as linear time.
 
-# Input: [1, 2, 3, 4, 5], [1, 3, 5, 7, 9]
+input = [1, 2, 3, 4, 5], [1, 3, 5, 7, 9]
 # Output: [1, 3, 5]
 
+def intersection(arrays)
+  array1 = arrays[0]
+  array2 = arrays[1]
+  high_a1 = array1[-1]
+  input_hash = Hash.new
+  out_array = []
+  array1.each do |number|
+    input_hash[number] = true
+  end
+  array2.each do |number|
+    if number > high_a1
+      return out_array
+    elsif input_hash[number] == true
+      out_array << number
+    end
+  end
+  return out_array
+end
 
-
-
+p intersection(input)
 
 # Array Subset
-# in list From Brute to Linear
+
 # Description
 # Given two arrays, determine whether one is a subset of the other. It is considered a subset if all the values in one array are contained within the other.
 
