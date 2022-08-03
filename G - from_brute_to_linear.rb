@@ -36,15 +36,33 @@ p intersection(input)
 
 # NOTE: You must accomplish this in O(n) time. This is also known as linear time.
 
-# Input: [1, 2, 3, 4, 5, 6], [6, 3, 2]
+input = [1, 2, 3, 4, 5, 6], [6, 3, 2]
 # Output: true
 
-# Input: [1, 2, 3, 4, 5, 6], [6, 3, 7]
+input2 = [1, 2, 3, 4, 5, 6], [6, 3, 7]
 # Output: false
 
+def subset(arrays)
+  array = arrays[0]
+  array2 = arrays[1]
+  number_line_hash = {}
+  has_subset = true
+
+  array.each do |num1|
+    number_line_hash[num1] = 1
+  end
+
+  array2.each do |num2|
+    !number_line_hash.has_key?(num2) ? has_subset = false : next
+  end
+  has_subset
+
+end
 
 
+p subset(input)
 
+p subset(input2)
 
 # Array Duplicate
 # in list From Brute to Linear
