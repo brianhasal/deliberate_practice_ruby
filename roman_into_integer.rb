@@ -2,14 +2,14 @@
 
 # Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
-# Symbol       Value
-# I             1
-# V             5
-# X             10
-# L             50
-# C             100
-# D             500
-# M             1000
+# Value       Symbol       Value
+#               I              1
+#    4    I     V           I  5
+#    9    I     X           I  10
+#    40   X     L           X  50
+#    90   X     C           X  100
+#    400  C     D           C  500
+#    900  C     M           C 1000
 
 # For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
 
@@ -51,30 +51,12 @@
 # s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 # It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
+def roman_to_int(string)
+  
+  if 'IV'
 
+  elsif 'IX'
 
-int = 3798
+  end
 
-ones = int % 10
-p ones
-
-int -= ones
-
-p int
-
-tens = int % 100
-
-p tens
-
-int -= tens
-
-p int
-
-
-hundreds = int % 1000
-
-p hundreds
-
-thousands = int - hundreds
-
-p thousands
+end
