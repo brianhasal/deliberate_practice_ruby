@@ -95,6 +95,25 @@ def roman_to_int(string)
   total += string.count("X") * 10
   total += string.count("V") * 5
   total += string.count("I")
+
+  # s.each_char do |c|
+  #   case c
+  #   when "M"
+  #     total += 1000
+  #   when "D"
+  #     total += 500
+  #   when "C"
+  #     total += 100    
+  #   when "L"
+  #     total += 50
+  #   when "X"
+  #     total += 10
+  #   when "V"
+  #     total += 5
+  #   when "I"
+  #     total += 1
+  #   end
+  # end
   
   return total  
 
