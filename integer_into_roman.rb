@@ -55,26 +55,33 @@
 
 int = 3798
 
-ones = int % 10
-p ones
+def int_to_roman(int)
 
-int -= ones
+  ones = int % 10
+  p ones
 
-p int
+  int -= ones
 
-tens = int % 100
+  p int
 
-p tens
+  tens = int % 100
 
-int -= tens
+  p tens
 
-p int
+  int -= tens
+
+  p int
 
 
-hundreds = int % 1000
+  hundreds = int % 1000
 
-p hundreds
+  p hundreds
 
-thousands = int - hundreds
+  thousands = int - hundreds
 
-p thousands
+  p thousands
+
+
+end
+
+int_to_roman(int)
