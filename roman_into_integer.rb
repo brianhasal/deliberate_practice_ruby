@@ -125,4 +125,5 @@ p roman_to_int(string2)
 p roman_to_int(string3)
 p roman_to_int("MMMCMXCIX")
 p roman_to_int("MMMDCCCLXXXVIII")
+p roman_to_int('MMMDCCXCVIII')
 

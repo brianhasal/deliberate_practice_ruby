@@ -2,14 +2,14 @@
 
 # Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
-# Symbol       Value
-# I             1
-# V             5
-# X             10
-# L             50
-# C             100
-# D             500
-# M             1000
+# Value       Symbol       Value
+#               I              1
+#    4    I     V           I  5
+#    9    I     X           I  10
+#    40   X     L           X  50
+#    90   X     C           X  100
+#    400  C     D           C  500
+#    900  C     M           C 1000
 
 # For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
 
@@ -53,35 +53,123 @@
 
 
 
-int = 3798
+int = 2022
 
 def int_to_roman(int)
+  string_out = ""
 
   ones = int % 10
-  p ones
-
   int -= ones
 
-  p int
-
   tens = int % 100
-
-  p tens
-
   int -= tens
-
-  p int
-
 
   hundreds = int % 1000
 
-  p hundreds
-
   thousands = int - hundreds
 
-  p thousands
+  if thousands > 1
+    focus_number = thousands / 1000
+    focus_number.times do
+      string_out += "M"
+    end
+  end
 
+  if hundreds > 1
+    focus_number = hundreds / 100
+    if focus_number <= 3
+      focus_number.times do 
+        string_out += "C"
+      end
+    end
+
+    if focus_number == 4
+      string_out += "CD"
+    end
+
+    if focus_number == 5
+      string_out += "D"
+    end
+
+    if focus_number >= 6 && focus_number <= 8
+      string_out += "D"
+      focus_reduced = focus_number - 5
+      focus_reduced.times do
+        string_out += "C"
+      end
+    end
+
+    if focus_number == 9
+      string_out += "CM"
+    end
+
+  end
+
+  if tens > 1
+    focus_number = tens / 10
+    if focus_number <= 3
+      focus_number.times do 
+        string_out += "X"
+      end
+    end
+
+    if focus_number == 4
+      string_out += "XL"
+    end
+
+    if focus_number == 5
+      string_out += "L"
+    end
+
+    if focus_number >= 6 && focus_number <= 8
+      string_out += "L"
+      focus_reduced = focus_number - 5
+      focus_reduced.times do
+        string_out += "X"
+      end
+    end
+
+    if focus_number == 9
+      string_out += "XC"
+    end
+
+  end
+
+  if ones >= 1
+    focus_number = ones
+    if focus_number <= 3
+      focus_number.times do 
+        string_out += "I"
+      end
+    end
+
+    if focus_number == 4
+      string_out += "IV"
+    end
+
+    if focus_number == 5
+      string_out += "V"
+    end
+
+    if focus_number >= 6 && focus_number <= 8
+      string_out += "V"
+      focus_reduced = focus_number - 5
+      focus_reduced.times do
+        string_out += "I"
+      end
+    end
+
+    if focus_number == 9
+      string_out += "IX"
+    end
+
+  end
+
+  return string_out
 
 end
 
-int_to_roman(int)
+p int_to_roman(int)
+p int_to_roman(3888)
+# MMMDCCCLXXXVIII
+# MMMDCCCLXXXVIII
