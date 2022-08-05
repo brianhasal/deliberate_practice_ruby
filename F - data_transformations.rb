@@ -1,13 +1,12 @@
 
 # ETL #1
-# in list Data Transformations
-# Description
-# You are given two parameters, an array and a number. Return a hash whose keys are each of the values from the array parameter, and whose values are the number parameter.
+# You are given two parameters, an array and a number. 
+# Return a hash whose keys are each of the values from the array parameter, and whose values are the number parameter.
 
 # Input:
 
-# First argument: ["a", "e", "i", "o", "u"]
-# Second argument: 1
+input1 =  ["a", "e", "i", "o", "u"]
+input2 = 1
 
 # Output:
 
@@ -19,23 +18,37 @@
 # 'u' => 1
 # }
 
+def array_converter(array, num)
+  out_hash = {}
+  array.each do |number|
+    out_hash[number] = num
+  end
+  return out_hash
+end
+
+p array_converter(input1, input2)
 
 
 
-
-# Flatten Hash
-# in list Data Transformations
+# Flatten Hash in list Data Transformations
 # Description
 # Given a hash, return a flat array containing all the hash’s keys and values.
 
-# Input: {“a” => 1, “b” => 2, “c” => 3, “d” => 4}
+input = {"a" => 1, "b" => 2, "c" => 3, "d" => 4}
 # Output: [“a”, 1, “b”, 2, “c”, 3, “d”, 4]
 
 # Activity
 
+def hash_flatten(hash)
+  out_array = []
+  hash.each do |key, value|
+    out_array << key
+    out_array << value
+  end
+  return out_array
+end
 
-
-
+p hash_flatten(input)
 
 
 # Flip Hash
