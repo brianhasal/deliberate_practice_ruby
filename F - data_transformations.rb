@@ -26,7 +26,7 @@ def array_converter(array, num)
   return out_hash
 end
 
-p array_converter(input1, input2)
+# p array_converter(input1, input2)
 
 
 
@@ -48,7 +48,7 @@ def hash_flatten(hash)
   return out_array
 end
 
-p hash_flatten(input)
+# p hash_flatten(input)
 
 
 # Flip Hash
@@ -60,11 +60,14 @@ input = {"a" => 1, "b" => 2, "c" => 3}
 # Output: {1 => "a", 2 => "b", 3 => "c"}
 
 def flipper(hash)
-  
-
+  out_hash = {}
+  hash.each do |key, value|
+    out_hash[value] = key
+  end
+  return out_hash
 end
 
-
+# p flipper(input)
 
 
 # ETL #2
