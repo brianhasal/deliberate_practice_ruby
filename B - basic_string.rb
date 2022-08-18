@@ -43,9 +43,25 @@ end
 # Description
 # Given a string, write a function that returns a copy of the original string that has every other character capitalized. (Capitalization should begin with the second character.)
 
-# Input: “hello, how are your porcupines today?”
+input = "hello, how are your porcupines today?"
 # Output: “hElLo, HoW ArE YoUr pOrCuPiNeS ToDaY?”
 
+
+def alt_caps(string)
+  new_string = ""
+  i = 0
+  string.each_char do |char|
+    if i % 2 != 0
+      new_string += "#{char.upcase}"
+    else
+      new_string += "#{char}"
+    end
+    i += 1
+  end
+  return new_string
+end
+
+p alt_caps(input)
 
 
 
