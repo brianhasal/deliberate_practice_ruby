@@ -59,11 +59,34 @@ end
 
 # Specifically use nested loops to solve this exercise even though there are other approaches as well.
 
-# Input: [2, 5, 3, 1, 0, 7, 11]
+input = [2, 5, 3, 1, 0, 7, 11]
 # Output: [3, 7]
 
-# Input: [1, 2, 3, 4, 5]
+input2 = [1, 2, 3, 4, 5]
 # Output: false (While 1, 2, 3, and 4 altogether add up to 10, we're seeking just one pair of numbers.)
+
+def sum10(array)
+  out_array = []
+  array.each do |target_no|
+    array.each do |compare|
+      if target_no != compare
+        if target_no + compare == 10
+          out_array << target_no
+          out_array << compare
+          return out_array
+        end
+      end
+
+    end
+  end
+  if out_array.length == 0
+    return false
+  end
+end
+
+p sum10(input)
+p sum10(input2)
+
 
 
 
