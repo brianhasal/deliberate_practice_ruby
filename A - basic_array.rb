@@ -72,7 +72,7 @@ def greatest_value(array)
   array.reduce(array[0]) { |highest, number| number > highest ? number : highest }
 end
 
-p greatest_value(input)
+# p greatest_value(input)
 
 
 
@@ -83,13 +83,16 @@ p greatest_value(input)
 # Description
 # Write a function that accepts an array of numbers and returns the product of all the numbers.
 
-# Input: [1, 2, 3, 4]
+input = [1, 2, 3, 4]
 # Output: 24
 
 # Explanation: (1 x 2 x 3 x 4) = 24
 
+def product(array)
+  return array.reduce(1) { |entry, number| entry *= number }
+end
 
-
+p product(input)
 
 
 
