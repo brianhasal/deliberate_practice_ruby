@@ -75,27 +75,18 @@ end
 # Description
 # You are given a hash in format #A, and you are to return the same data as a hash using format #B, as specified below:
 
-# Input:
-
-# {
-# 1 => ["A", "E", "I", "O", "U"]
-# }
+input = {
+  1 => ["A", "E", "I", "O", "U"]
+}
 
 # Output:
 
-# {
-# 'a' => 1,
-# 'e' => 1,
-# 'i' => 1,
-# 'o' => 1,
-# 'u' => 1
-# }
-# Input:
+# { 'a' => 1, 'e' => 1, 'i' => 1, 'o' => 1, 'u' => 1 }
 
-# {
-# 1 => ["A", "E"],
-# 2 => ["D", "G"]
-# }
+input2 = {
+  1 => ["A", "E"],
+  2 => ["D", "G"]
+}
 
 # Output:
 
@@ -106,17 +97,15 @@ end
 # 'g' => 2
 # }
 
-# Input:
-
-# {
-# 1 => ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
-# 2 => ["D", "G"],
-# 3 => ["B", "C", "M", "P"],
-# 4 => ["F", "H", "V", "W", "Y"],
-# 5 => ["K"],
-# 8 => ["J", "X"],
-# 10 => ["Q", "Z"]
-# }
+input3 = {
+  1 => ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
+  2 => ["D", "G"],
+  3 => ["B", "C", "M", "P"],
+  4 => ["F", "H", "V", "W", "Y"],
+  5 => ["K"],
+  8 => ["J", "X"],
+  10 => ["Q", "Z"]
+}
 
 # Output:
 
@@ -151,6 +140,24 @@ end
 
 
 
+
+def hash_to_hash(hash)
+  temp_hash = Hash.new
+  out_hash = Hash.new
+  hash.each do |key, value|
+    temp_hash[value] = key
+  end
+  temp_hash.each do |key, value|
+    key.each do |letter|
+      out_hash[letter.downcase] = value
+    end
+  end
+  out_hash
+end
+
+p hash_to_hash(input)
+p hash_to_hash(input2)
+p hash_to_hash(input3)
 
 
 
