@@ -101,12 +101,20 @@ p product(input)
 # Description
 # Given an array, write a function that returns an array that contains the original array’s values in reverse.
 
-# Input: [1, 2, 3, 4, 5]
+input = [1, 2, 3, 4, 5]
 # Output: [5, 4, 3, 2, 1]
 
+def reverse(array)
+  i = array.length - 1
+  out_array = []
+  while i >= 0
+    out_array << array[i]
+    i -= 1
+  end
+  return out_array
+end
 
-
-
+p reverse(input)
 
 
 # Skip It ->
