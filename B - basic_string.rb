@@ -71,9 +71,21 @@ p alt_caps(input)
 # Description
 # Given a string, write a function that returns the first occurence of two duplicate characters in a row, and return the duplicated character.
 
-# Input: “abcdefghhijkkloooop”
+input = "abcdefghhijkkloooop"
 # Output: “h”
 
+def char_dupes(string)
+  i = 0
+  while i < string.length
+    if string[i] == string[i + 1]
+      return string[i]
+    end
+    i += 1
+  end
+  return false
+end
+
+p char_dupes(input)
 
 
 # Palindrome
