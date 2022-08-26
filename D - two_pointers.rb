@@ -1,4 +1,3 @@
-
 # Array Mesh I
 # in list Two Pointers
 # Description
@@ -7,11 +6,6 @@
 # Input: ["a", "b", "c"], ["d", "e", "f", "g"]
 # Output: ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"]
 
-
-
-
-
-
 # Array Mesh II
 # in list Two Pointers
 # Description
@@ -19,11 +13,6 @@
 
 # Input: ["a", "b", "c", "d"]
 # Output: ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"]
-
-
-
-
-
 
 # Largest Product
 # in list Two Pointers
@@ -51,7 +40,6 @@ end
 
 # p largest_product(input)
 
-
 # Two Sum I
 # in list Two Pointers
 # Description
@@ -76,7 +64,6 @@ def sum10(array)
           return out_array
         end
       end
-
     end
   end
   if out_array.length == 0
@@ -84,13 +71,8 @@ def sum10(array)
   end
 end
 
-p sum10(input)
-p sum10(input2)
-
-
-
-
-
+# p sum10(input)
+# p sum10(input2)
 
 # Merge Sorted Arrays ->
 # in list Two Pointers
@@ -104,31 +86,50 @@ second_a = [3, 6, 9]
 # Modified A : [1, 5, 6, 8, 9]
 
 def merger(array1, array2)
-  fa_i = 0
-  se_i = 0
-  
+  out_array = []
+  a1_i = 0
+  a2_i = 0
+  index = 0
+  total_amount = array1.length + array2.length
+  # p array1[a1_i]
+  # p array2[a2_i]
+
+  while index < total_amount
+    p index
+
+    while a1_i < array1.length
+      if array2[a2_i] > array1[a1_i]
+        out_array << array1[a1_i]
+        a1_i += 1
+        p array1[a1_i]
+        p array2[a2_i]
+        p "a1-i fired"
+        p out_array
+        p "##########"
+        break
+      end
+    end
+    
+    while a2_i < array2.length
+      if array2[a2_i] < array1[a1_i]
+        out_array << array2[a2_i]
+        a2_i += 1
+        p array1[a1_i]
+        p array2[a2_i]
+        p "a2-i fired"
+        p out_array
+        p "##########"
+        break
+      end
+    end
+
+    index += 1
+  end
+  # return out_array
 end
 
-p merger(first_a, second_a)
+merger(first_a, second_a)
 
-
-# array2.each do |num2|
-#   i = 0
-#   while i < array2.length
-
-#     if array1[i] < num2 && num2 < array1[i + 1]
-#       array1.insert((i + 1), num2)  
-#       i += 1
-#       break
-#     elsif num2 > array1[i + 1]
-#       array1 << num2
-#       i += 1
-#       break
-#     end
-
-#   end
-# end
-# return array1
 # 100 Coolio Array
 # in list Two Pointers
 # Description
@@ -145,12 +146,6 @@ p merger(first_a, second_a)
 
 # [1, 2, 3, 97, 98, 99]
 # [90, 20, 70, 100, 30, 80, 10]
-
-
-
-
-
-
 
 # Longest Common Prefix
 # in list Two Pointers
@@ -171,8 +166,3 @@ p merger(first_a, second_a)
 # Note:
 
 # All given inputs are in lowercase letters a-z.
-
-
-
-
-
