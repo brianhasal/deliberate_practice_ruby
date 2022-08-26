@@ -98,16 +98,37 @@ p sum10(input2)
 # Given two sorted arrays, merge the second array into the first array while ensuring that the first array remains sorted. Do not use any built-in sort methods.
 
 # Input :
-# A : [1, 5, 8]
-# B : [6, 9]
+first_a = [1, 5, 8]
+second_a = [3, 6, 9]
 
 # Modified A : [1, 5, 6, 8, 9]
 
+def merger(array1, array2)
+  fa_i = 0
+  se_i = 0
+  
+end
+
+p merger(first_a, second_a)
 
 
+# array2.each do |num2|
+#   i = 0
+#   while i < array2.length
 
+#     if array1[i] < num2 && num2 < array1[i + 1]
+#       array1.insert((i + 1), num2)  
+#       i += 1
+#       break
+#     elsif num2 > array1[i + 1]
+#       array1 << num2
+#       i += 1
+#       break
+#     end
 
-
+#   end
+# end
+# return array1
 # 100 Coolio Array
 # in list Two Pointers
 # Description
