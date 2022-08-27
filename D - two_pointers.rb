@@ -81,7 +81,7 @@ end
 
 # Input :
 first_a = [1, 5, 8]
-second_a = [6, 9]
+second_a = [3, 6, 9]
 
 # Modified A : [1, 5, 6, 8, 9]
 
@@ -89,53 +89,37 @@ def merger(array1, array2)
   out_array = []
   a1_i = 0
   a2_i = 0
-  index = 0
-  total_amount = array1.length + array2.length
-  # p array1[a1_i]
-  # p array2[a2_i]
 
-    # p index
-
-  while a1_i < array1.length || a2_i < array2.length
-
-    unless array1[a1_i]
+  while a1_i < array1.length || array2[a2_i] < array2.length
+    
+    
+    if array2[a2_i] == nil
       out_array << array1[a1_i]
       a1_i += 1
       break
-    end
-
-    unless array2[a2_i]
+    elsif array1[a1_i] == nil
       out_array << array2[a2_i]
       a2_i += 1
       break
     end
 
-    if array1[a1_i] < array2[a2_i]
-      out_array << array1[a1_i]
-      a1_i += 1
-      # p array1[a1_i]
-      # p array2[a2_i]
-      p "a1-i fired"
-      p out_array
-      p "##########"
 
-    elsif array2[a2_i] < array1[a1_i]
+    if array2[a2_i] < array1[a1_i]
       out_array << array2[a2_i]
       a2_i += 1
-      # p array1[a1_i]
-      # p array2[a2_i]
-      p "a2-i fired"
-      p out_array
-      p "##########"
+      p array1[a1_i]
+      p array2[a2_i]
+    elsif array2[a2_i] > array1[a1_i]
+      out_array << array1[a1_i]
+      a1_i += 1
+      p array1[a1_i]
+      p array2[a2_i]
     end
   end
   return out_array
 end
 
-    
-
-
-merger(first_a, second_a)
+p merger(first_a, second_a)
 
 # 100 Coolio Array
 # in list Two Pointers
