@@ -91,8 +91,8 @@ def merger(array1, array2)
   a2_i = 0
   index = 0
   total_amount = array1.length + array2.length
-  # p array1[a1_i]
-  # p array2[a2_i]
+  p array1[a1_i]
+  p array2[a2_i]
 
   while index < total_amount
     p index
