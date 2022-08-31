@@ -61,7 +61,7 @@ def alt_caps(string)
   return new_string
 end
 
-p alt_caps(input)
+# p alt_caps(input)
 
 
 
@@ -85,7 +85,7 @@ def char_dupes(string)
   return false
 end
 
-p char_dupes(input)
+# p char_dupes(input)
 
 
 # Palindrome
@@ -93,11 +93,55 @@ p char_dupes(input)
 # Description
 # Given a string, write a function that returns true if it is a palindrome, and false if it is not. (A palindrome is a word that reads the same both forward and backward.)
 
-# Input: “racecar”
+input1 = "racecar"
 # Output: true
 
-# Input: “baloney”
+input2 = "baloneymarshmallow"
 # Output: false
+
+input3 = "amanaplanacanalpanama"
+
+def palindrome(input_string)
+  length = input_string.length
+
+  if length % 2  == 0
+    even = (length / 2) - 1
+  else
+    odd = (length / 2)
+  end
+
+
+  if odd
+    down = odd - 1
+    up = odd + 1
+    while down >= 0
+      if input_string[down] != input_string[up]
+        return false
+      end
+      down -= 1
+      up += 1
+    end
+    return true
+
+
+
+  else
+    up = even + 1
+    while even >= 0
+      if input_string[even] != input_string[up]
+        return false
+      end
+      even -= 1
+      up += 1
+    end
+    return true
+  end
+
+end
+
+# p palindrome(input1)
+# p palindrome(input2)
+# p palindrome(input3)
 
 
 
