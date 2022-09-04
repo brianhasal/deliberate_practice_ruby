@@ -226,3 +226,66 @@ end
 
 
 # output = Test.assert_equals(subtract_sum(10), "apple")
+
+
+
+
+
+
+# Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+#   Examples input/output:
+  
+#   XO("ooxx") => true
+#   XO("xooxx") => false
+#   XO("ooxXm") => true
+#   XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+#   XO("zzoo") => false
+
+
+
+
+
+
+# String Tops
+# Task
+# Write a function that accepts msg string and returns local tops of string from the highest to the lowest.
+# The string's tops are from displaying the string in the below way:
+
+#                                                       3 
+#                               p                     2   4
+#             g               o   q                 1
+#   b       f   h           n       r             z 
+# a   c   e       i       m          s          y
+#       d           j   l             t       x
+#                     k                 u   w 
+#                                         v
+
+# The next top is always 1 character higher than the previous one. For the above example, the solution for the abcdefghijklmnopqrstuvwxyz1234 input string is 3pgb.
+
+# When the msg string is empty, return an empty string.
+# The input strings may be very long. Make sure your solution has good performance.
+# Check the test cases for more samples.
+
+
+
+
+
+
+
+# Mathemagics: the 21 Card Trick
+
+# The Twenty-One Card Trick, also known as the 11th card trick or three column trick, is a simple self-working card trick that uses basic mathematics to reveal the user's selected card.
+# The game uses a selection of 21 cards out of a standard deck. These are shuffled and the player selects one at random. The cards are then dealt out face up in three columns of 7 cards each. The player points to the column containing their card. The cards are picked up and the process is repeated three times, at which point the magician reveals the selected card.
+
+# Source: Wikipedia
+
+# Your task is to implement an algorithm that is able to execute the Twenty-One Card Trick. To simplify things, the cards will be changed to the set of integers between 1 and 21(inclusive). The function will be passed as argument a member of the audience that has selected a certain card and has a method get_input that receives a list of 3 lists as arguments and returns the index of the row contained the selected card. Example:
+
+# audience = Audience.new 13
+
+# > audience.get_input [[1,2,3,4,5,6,7], [8,9,10,11,12,13,14], [15,16,17,18,19,20,21]]
+# 1 # Since 13 is at the 2nd row
+# After 3 times it is asked, however, the audience member no longer will give an answer. Use these three functions invokations to discover which card the audience member has.
+
+
