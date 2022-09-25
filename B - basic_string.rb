@@ -151,16 +151,28 @@ end
 # Description
 # Given two strings of equal length, write a function that returns the number of characters that are different between the two strings.
 
-# Input: "ABCDEFG", "ABCXEOG"
+input1 = ["ABCDEFG", "ABCXEOG"]
 # Output: 2
 
 # Explanation: While the A, B, C, E, and G are in the same place for both strings, they have different characters in the other spaces. Since there are 2 such spaces that are different (the D and F in the first string), we return 2.
 
-# Input: "ABCDEFG", "ABCDEFG",
+input2 = ["ABCDEFG", "ABCDEFG"]
 # Output: 0
 
+def parser(array)
+  i = 0
+  counter = 0
+  while i < array[0].length
+    if array[0][i] != array[1][i]
+      counter += 1
+    end
+    i += 1
+  end
+  return counter
+end
 
-
+p parser(input1)
+p parser(input2)
 
 # Reverse Words
 # in list Basic String
