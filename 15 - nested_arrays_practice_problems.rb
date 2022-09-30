@@ -2,11 +2,48 @@
 #  1. Use a nested loop to convert an array of number pairs into a single flattened array.
 #     For example, [[1, 3], [8, 9], [2, 16]] becomes [1, 3, 8, 9, 2, 16].
 
+
+array = [[1, 3], [8, 9], [2, 16]]
+
+def flattener(array)
+  out_array = []
+  array.each do |pair|
+    pair.each do |num|
+      out_array << num
+    end
+  end
+  return out_array
+end
+
+p flattener(array)
+
+
 #  2. Use a nested loop with two arrays of strings to create a new array of strings with each string combined.
 #     For example, ["a", "b", "c"] and ["d", "e", "f", "g"] becomes ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"].
 
 #  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
 #     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
+
+input = ["a", "b", "c", "d"]
+
+
+def combo_maker(array)
+  out_array = []
+  i = 0
+  while i < array.length
+    array.each do |letter|
+      if letter != array[i]
+        out_array << (letter + array[i])
+      end
+    end
+    i += 1
+  end
+  return out_array
+end
+
+p combo_maker(input)
+
+
 
 #  4. Use a nested loop to find the largest product of any two different numbers within a given array.
 #     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
