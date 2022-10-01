@@ -155,9 +155,9 @@ def hash_to_hash(hash)
   out_hash
 end
 
-p hash_to_hash(input)
-p hash_to_hash(input2)
-p hash_to_hash(input3)
+# p hash_to_hash(input)
+# p hash_to_hash(input2)
+# p hash_to_hash(input3)
 
 
 
@@ -171,21 +171,23 @@ p hash_to_hash(input3)
 
 # For example, given this array of posts (note that the submitted_by is an id number):
 
-# [
-# {title: 'Me Eating Pizza', submitted_by: 231, likes: 1549},
-# {title: 'i never knew how cool i was until now', submitted_by: 989, likes: 3},
-# {title: 'best selfie evar!!!', submitted_by: 111, likes: 1092},
-# {title: 'Mondays are the worst', submitted_by: 403, likes: 644}
-# ]
+input1 = 
+[
+{title: 'Me Eating Pizza', submitted_by: 231, likes: 1549},
+{title: 'i never knew how cool i was until now', submitted_by: 989, likes: 3},
+{title: 'best selfie evar!!!', submitted_by: 111, likes: 1092},
+{title: 'Mondays are the worst', submitted_by: 403, likes: 644}
+]
 
 # And this array of users:
 
-# [
-# {user_id: 403, name: "Aunty Em"},
-# {user_id: 231, name: "Joelle P."},
-# {user_id: 989, name: "Lyndon Johnson"},
-# {user_id: 111, name: "Patti Q."},
-# ]
+input2 = 
+[
+{user_id: 403, name: "Aunty Em"},
+{user_id: 231, name: "Joelle P."},
+{user_id: 989, name: "Lyndon Johnson"},
+{user_id: 111, name: "Patti Q."},
+]
 
 # Return the array of posts as follows:
 
@@ -197,9 +199,19 @@ p hash_to_hash(input3)
 # ]
 
 
+def post_user(array1, array2)
+  out_array = []
+  array1.each do |post|
+    array2.each do |user|
+      if post[:submitted_by] == user[:user_id]
+        post[:submitted_by] = user[:name]
+        out_array << post
+      end
+    end
+  end
+end
 
-
-
+p post_user(input1, input2)
 
 
 
