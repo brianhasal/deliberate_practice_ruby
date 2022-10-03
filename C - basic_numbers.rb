@@ -130,9 +130,23 @@ p fibonacci(20)
 
 # Resulting in 9 steps. So for input n = 12, the return value would be 9.
 
+def collatz(number)
+  if number == 1
+    return 3
+  end
+  counter = 0
+  until number == 1
+    if number % 2 == 0
+      number /= 2
+    else
+      number = (number * 3) + 1
+    end
+    counter += 1
+  end
+  return counter
+end
 
-
-
+p collatz(361)
 
 # Largest Palindrome Product
 # in list Basic Numbers
