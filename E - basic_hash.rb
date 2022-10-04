@@ -172,15 +172,46 @@ end
 
 # Do not use any built-in sort methods.
 
-# Input: “silent”, “listen”
+str1 = "silent"
+str2 = "listen"
 # Output: true
 
+stra = "frog"
+strb = "bear"
+
+strs = "squeegee"
+strt = "queegees"
 # Input: “frog”, “bear”
 # Output: false
 
 def anagram_test(str1, str2)
+  test_hash_a = {}
+  test_hash_b = {}
+  str1.each_char do |letter1|
+    if test_hash_a[letter1]
+      test_hash_a[letter1] += 1
+    else
+      test_hash_a[letter1] = 1
+    end
+  end
 
+  str2.each_char do |letter2|
+    if test_hash_b[letter2]
+      test_hash_b[letter2] += 1
+    else
+      test_hash_b[letter2] = 1
+    end
+  end
 
+  test_hash_a.each do |key, _value|
+    if test_hash_a[key] != test_hash_b[key]
+      return false
+    end
+  end
+
+  true
 end
 
-
+p anagram_test(str1, str2)
+p anagram_test(stra, strb)
+p anagram_test(strs, strt)
