@@ -178,6 +178,9 @@ end
 # Input: “frog”, “bear”
 # Output: false
 
+def anagram_test(str1, str2)
 
+
+end
 
 
