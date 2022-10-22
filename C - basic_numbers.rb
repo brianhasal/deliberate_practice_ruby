@@ -33,6 +33,18 @@
 # If the number is divisible by both 3 and 5, print out "FIZZBUZZ".
 
 
+# function fizzbuzz() {
+#   for (let i = 1; i <= 100; i++) {
+#     if (i % 5 === 0 && i % 3 === 0) {
+#       console.log("FIZZBUZZ");
+#     }
+#   }
+# }
+
+
+
+
+
 
 
 
@@ -63,7 +75,7 @@ def fibonacci_2(count)
 
 end
 
-p fibonacci_2(20)
+# p fibonacci_2(20)
 
 
 def fibonacci(count)
@@ -74,7 +86,7 @@ def fibonacci(count)
   end
 end
 
-p fibonacci(20)
+# p fibonacci(20)
 
 
 
@@ -102,6 +114,24 @@ p fibonacci(20)
 
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
+
+def sum_of_multiples(number)
+  total = 0
+  i = 3
+  while i < number
+    if i % 3 == 0 && i % 5 == 0
+      total += i
+    elsif i % 3 == 0 
+      total += i
+    elsif i % 5 == 0
+      total += i 
+    end
+    i += 1
+  end
+  return total
+end
+
+p sum_of_multiples(1000)
 
 
 
@@ -146,7 +176,7 @@ def collatz(number)
   return counter
 end
 
-p collatz(361)
+# p collatz(361)
 
 # Largest Palindrome Product
 # in list Basic Numbers
