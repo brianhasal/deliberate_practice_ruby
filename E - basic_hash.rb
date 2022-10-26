@@ -132,21 +132,28 @@ input = 'ACGTGGTCTTAA'
 def rna_converter(string)
   out_array = []
   translate_hash = {
-    G: "C",
-    C: "G",
-    T: "A",
-    A: "U"
+    "G" => "C",
+    "C" => "G",
+    "T" => "A",
+    "A" => "U"
   }
 
-  string_array = string.split("")
-  string_array.each do |letter|
-    translate_hash.each do |key, value|
-      if letter == key.to_s
-        out_array << value
-      end
-    end
-  end
-  return out_array.join()
+  string
+    .chars
+    .map{|letter| translate_hash[letter]}
+    .join
+
+
+
+  # string_array = string.split("")
+  # string_array.each do |letter|
+  #   translate_hash.each do |key, value|
+  #     if letter == key.to_s
+  #       out_array << value
+  #     end
+  #   end
+  # end
+  # return out_array.join()
 end
 
 p rna_converter(input)
