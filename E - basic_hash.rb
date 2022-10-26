@@ -107,7 +107,7 @@ def over1k(array)
 
 end
 
-p over1k(input)
+# p over1k(input)
 
 
 # RNA Transcription
@@ -126,10 +126,30 @@ p over1k(input)
 
 # So based on all this, here's a sample input/output:
 
-# Input: 'ACGTGGTCTTAA'
+input = 'ACGTGGTCTTAA'
 # Output: 'UGCACCAGAAUU'
 
+def rna_converter(string)
+  out_array = []
+  translate_hash = {
+    G: "C",
+    C: "G",
+    T: "A",
+    A: "U"
+  }
 
+  string_array = string.split("")
+  string_array.each do |letter|
+    translate_hash.each do |key, value|
+      if letter == key.to_s
+        out_array << value
+      end
+    end
+  end
+  return out_array.join()
+end
+
+p rna_converter(input)
 
 
 
