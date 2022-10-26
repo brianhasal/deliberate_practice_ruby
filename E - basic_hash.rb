@@ -107,7 +107,7 @@ def over1k(array)
 
 end
 
-# p over1k(input)
+p over1k(input)
 
 
 # RNA Transcription
@@ -212,6 +212,6 @@ def anagram_test(str1, str2)
   true
 end
 
-p anagram_test(str1, str2)
-p anagram_test(stra, strb)
-p anagram_test(strs, strt)
+# p anagram_test(str1, str2)
+# p anagram_test(stra, strb)
+# p anagram_test(strs, strt)
