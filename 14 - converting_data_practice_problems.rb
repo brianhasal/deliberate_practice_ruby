@@ -28,6 +28,18 @@ p l_counter(string)
 #  4. Convert a hash into an array of arrays.
 #     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
 
+input = {"chair" => 100, "book" => 14}
+
+def hash_to_array(hash)
+  out_array = []
+  hash.each do |key, value|
+    out_array << [key, value]
+  end
+  return out_array
+end
+
+p  hash_to_array(input)
+
 #  5. Convert a hash into an array of hashes using the keys from each hash as the :id key in each of the array's hashes.
 #     For example, {321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}} becomes [{id: 321, name: "Alice", age: 31}, {id: 322, name: "Maria", age: 27}].
 
