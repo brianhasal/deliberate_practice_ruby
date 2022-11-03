@@ -1,11 +1,36 @@
 #  1. Start with an array of numbers and compute the sum of all the numbers.
 #     For example, [5, 10, 8, 3] becomes 26.
 
+input = [5, 10, 8, 3]
+
+def summer(array)
+  return array.reduce(0) {|sum, num| sum += num}
+end
+
+p summer(input)
+
 #  2. Start with an array of strings and combine them all into a single string.
 #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
 
+input = ["volleyball", "basketball", "badminton"]
+
+def stringer(array)
+  return array.reduce(0) {|string, rem_str| ""}
+
+end
+
+p stringer(input)
+
 #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
+
+input = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+
+def hash_sum(array)
+  return array.reduce(0) {|total, item| total + item[:price]}
+end
+
+p hash_sum(input)
 
 #  4. Start with an array of numbers and compute the the minumum number.
 #     For example, [5, 10, 8, 3, 9] becomes 3.
@@ -52,7 +77,7 @@
 
 
 
-
+#  object.reduce(starting_index) {|starting_value, variable_for_remaining_values| fuction...}
 
 
 
