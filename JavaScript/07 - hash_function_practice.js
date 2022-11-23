@@ -1,12 +1,35 @@
 // 1. Make a hash to store a person's first name, last name, and email address. Then print each attribute on separate lines.
 
+let names = {firstName: "Brian", lastName: "Hasal", email: "joe@b.com"};
+
+function printer(hash) {
+  for(var key in hash) {
+    console.log(hash[key]);
+  }
+
+};
+
+printer(names);
+
 // 2. Make an array of hashes to store the first name and last name for 3 different people. Then print out the first person's info.
 
 // 3. Make a hash to store prices for 3 different menu items. Then add a new menu item and price and print the hash to see the result.
 
+let menu = {"a": 2, "b": 3, "c":4};
+
+menu['d'] = 5;
+
+console.log(menu);
+
 // 4. Make a hash to store a book's title, author, number of pages, and language. Then print each attribute on separate lines.
 
+
 // 5. Make an array of hashes to store the title and author for 3 different books. Then print out the third book's author.
+
+// let books = [{"a": 2, "b": 3, "c":4}, {"d": 2, "e": 3, "f":4}, {"g": 2, "h": 3, "i":9}]
+
+// console.log(books[2]['i']);
+
 
 // 6. Make a hash to store 3 different states and their captitals. Then add a new state and capital and print the hash to see the result.
 

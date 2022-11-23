@@ -1,8 +1,40 @@
 // 1. Create an array to store 3 words. Then add two more words to the array and print the array on one line.
 
+let colorArray = ["red", "blue", "green"];
+// console.log(colorArray);
+
+let yellow = "yellow";
+let purple = "purple";
+
+let newArray = colorArray.push(yellow);
+
+// console.log(colorArray);
+
+newArray = colorArray.push(purple);
+
+// console.log(colorArray);
+
 // 2. Create an array to store 4 letters. Then change the second letter to a number and print the array on one line.
 
+let lArray = ['a', 'b', 'c', 'd'];
+
+lArray[1] = 2;
+
+// console.log(lArray);
+
 // 3. Create an array to store 5 numbers. Then print out each number on separate lines with a while loop.
+
+let nArray = [1, 2, 3, 4, 5];
+
+function printer(array) {
+  let i = 0;
+  while (i < array.length) {
+    console.log(array[i]);
+    i++;
+  };
+}
+
+// printer(nArray);
 
 // 4. Create an array to store 1 number. Then add three more numbers to the array and print the array on one line.
 
