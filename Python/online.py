@@ -22,29 +22,7 @@
 # output = Test.assert_equals(maskify('1'), '1')
 # output = Test.assert_equals(maskify('11111'), '#1111')
 
-input = "7654321"
-
-def masker(string)
-  if string.length <= 4
-    return string
-  else
-    i = string.length * -1
-    while i < 0
-      if i < -4
-        string[i] = "#"
-      end
-      i += 1
-    end
-    return string
-  end
-end
-
-# p masker(input)
-# p masker("4556364607935616")
-# p masker("11111")
-
-
-
+# input = "7654321"
 
 
 

@@ -3,73 +3,32 @@
 
 # Given two arrays, return a new array that contains the intersection of the two arrays. The intersection means the values that are contained in both of the arrays. Do not use the "&", or any built-in intersection methods.
 
-# NOTE: You must accomplish this in O(n) time. This is also known as linear time.
+# You must accomplish this in O(n) time. This is also known as linear time.
 
-input = [1, 2, 3, 4, 5], [1, 3, 5, 7, 9]
+# input = [1, 2, 3, 4, 5], [1, 3, 5, 7, 9]
 # Output: [1, 3, 5]
 
-def intersection(arrays)
-  array1 = arrays[0]
-  array2 = arrays[1]
-  high_a1 = array1[-1]
-  input_hash = Hash.new
-  out_array = []
-  array1.each do |number|
-    input_hash[number] = true
-  end
-  array2.each do |number|
-    if number > high_a1
-      return out_array
-    elsif input_hash[number] == true
-      out_array << number
-    end
-  end
-  return out_array
-end
-
-p intersection(input)
 
 # Array Subset
 
 # Description
 # Given two arrays, determine whether one is a subset of the other. It is considered a subset if all the values in one array are contained within the other.
 
-# NOTE: You must accomplish this in O(n) time. This is also known as linear time.
+# You must accomplish this in O(n) time. This is also known as linear time.
 
-input = [1, 2, 3, 4, 5, 6], [6, 3, 2]
+# input = [1, 2, 3, 4, 5, 6], [6, 3, 2]
 # Output: true
 
-input2 = [1, 2, 3, 4, 5, 6], [6, 3, 7]
+# input2 = [1, 2, 3, 4, 5, 6], [6, 3, 7]
 # Output: false
 
-def subset(arrays)
-  array = arrays[0]
-  array2 = arrays[1]
-  number_line_hash = {}
-  has_subset = true
-
-  array.each do |num1|
-    number_line_hash[num1] = 1
-  end
-
-  array2.each do |num2|
-    !number_line_hash.has_key?(num2) ? has_subset = false : next
-  end
-  has_subset
-
-end
-
-
-p subset(input)
-
-p subset(input2)
 
 # Array Duplicate
 # in list From Brute to Linear
 # Description
 # A given array has one pair of duplicate values. Return the first duplicate value.
 
-# NOTE: You must accomplish this in O(n) time. This is also known as linear time.
+# You must accomplish this in O(n) time. This is also known as linear time.
 
 # Input: [5, 2, 9, 7, 2, 6]
 # Output: 2
@@ -85,7 +44,7 @@ p subset(input2)
 # Description
 # A given string contains all the letters from the alphabet except for one. Return the missing letter.
 
-# NOTE: You must accomplish this in O(n) time. This is also known as linear time.
+# You must accomplish this in O(n) time. This is also known as linear time.
 
 # Input: “The quick brown box jumps over a lazy dog”
 # Output: “f”
@@ -100,7 +59,7 @@ p subset(input2)
 # Description
 # Given a string, find the first non-repeating character in it and return its index. If it doesn't exist, return -1.
 
-# NOTE: You must accomplish this in O(n) time. This is also known as linear time.
+# You must accomplish this in O(n) time. This is also known as linear time.
 
 # Examples:
 

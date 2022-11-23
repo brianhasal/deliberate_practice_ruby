@@ -25,7 +25,7 @@
 
 # Example 1:
 
-string1 = "III"
+# string1 = "III"
 # Output: 3
 # Explanation: III = 3.
 
@@ -33,7 +33,7 @@ string1 = "III"
 
 # Example 2:
 
-string2 = "LVIII"
+# string2 = "LVIII"
 # Output: 58
 # Explanation: L = 50, V= 5, III = 3.
 
@@ -41,7 +41,7 @@ string2 = "LVIII"
 
 # Example 3:
 
-string3 = "MCMXCIV"
+# string3 = "MCMXCIV"
 # Output: 1994
 # Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
  
@@ -54,76 +54,4 @@ string3 = "MCMXCIV"
 
 
 
-def roman_to_int(string)
-
-  total = 0
-
-  if string.include?("CM")
-    string.sub!('CM', '')
-    total += 900
-  end
-
-  if string.include?("CD")
-    string.sub!('CD', '')
-    total += 400
-  end
-
-  if string.include?("XC")
-    string.sub!('XC', '')
-    total += 90
-  end
-
-  if string.include?("XL")
-    string.sub!('XL', '')
-    total += 40
-  end
-
-  if string.include?("IX")
-    string.sub!('IX', '')
-    total += 9
-  end
-
-  if string.include?("IV")
-    string.sub!('IV', '')
-    total += 4
-  end
-  
-  total += string.count("M") * 1000
-  total += string.count("D") * 500
-  total += string.count("C") * 100
-  total += string.count("L") * 50
-  total += string.count("X") * 10
-  total += string.count("V") * 5
-  total += string.count("I")
-
-  # s.each_char do |c|
-  #   case c
-  #   when "M"
-  #     total += 1000
-  #   when "D"
-  #     total += 500
-  #   when "C"
-  #     total += 100    
-  #   when "L"
-  #     total += 50
-  #   when "X"
-  #     total += 10
-  #   when "V"
-  #     total += 5
-  #   when "I"
-  #     total += 1
-  #   end
-  # end
-  
-  return total  
-
-end
-
-
-p roman_to_int(string1)
-p roman_to_int(string2)
-p roman_to_int(string3)
-p roman_to_int("MMMCMXCIX")
-p roman_to_int("MMMDCCCLXXXVIII")
-p roman_to_int('MMMDCCXCVIII')
 

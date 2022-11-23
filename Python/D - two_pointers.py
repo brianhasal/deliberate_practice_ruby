@@ -19,26 +19,10 @@
 # Description
 # Find the largest product of any two numbers within a given array.
 
-input = [5, -2, 1, 9, -7, 2, 6]
+# input = [5, -2, 1, 9, -7, 2, 6]
 # Output: 63 (-9 * -7)
 
-def largest_product(array)
-  i = 0
-  highest_no = array[0]
-  while i <= array.length - 2
-    array.each do |num|
-      unless i == array.index(num)
-        if num * array[i] > highest_no
-          highest_no = num * array[i]
-        end
-      end
-    end
-    i += 1
-  end
-  return highest_no
-end
 
-# p largest_product(input)
 
 # Two Sum I
 # in list Two Pointers
@@ -47,32 +31,13 @@ end
 
 # Specifically use nested loops to solve this exercise even though there are other approaches as well.
 
-input = [2, 5, 3, 1, 0, 7, 11]
+# input = [2, 5, 3, 1, 0, 7, 11]
 # Output: [3, 7]
 
-input2 = [1, 2, 3, 4, 5]
+# input2 = [1, 2, 3, 4, 5]
 # Output: false (While 1, 2, 3, and 4 altogether add up to 10, we're seeking just one pair of numbers.)
 
-def sum10(array)
-  out_array = []
-  array.each do |target_no|
-    array.each do |compare|
-      if target_no != compare
-        if target_no + compare == 10
-          out_array << target_no
-          out_array << compare
-          return out_array
-        end
-      end
-    end
-  end
-  if out_array.length == 0
-    return false
-  end
-end
 
-# p sum10(input)
-# p sum10(input2)
 
 # Merge Sorted Arrays ->
 # in list Two Pointers
@@ -80,46 +45,12 @@ end
 # Given two sorted arrays, merge the second array into the first array while ensuring that the first array remains sorted. Do not use any built-in sort methods.
 
 # Input :
-first_a = [1, 5, 8]
-second_a = [3, 6, 9]
+# first_a = [1, 5, 8]
+# second_a = [3, 6, 9]
 
 # Modified A : [1, 5, 6, 8, 9]
 
-def merger(array1, array2)
-  out_array = []
-  a1_i = 0
-  a2_i = 0
 
-  while a1_i < array1.length || array2[a2_i] < array2.length
-    
-    
-    if array2[a2_i] == nil
-      out_array << array1[a1_i]
-      a1_i += 1
-      break
-    elsif array1[a1_i] == nil
-      out_array << array2[a2_i]
-      a2_i += 1
-      break
-    end
-
-
-    if array2[a2_i] < array1[a1_i]
-      out_array << array2[a2_i]
-      a2_i += 1
-      p array1[a1_i]
-      p array2[a2_i]
-    elsif array2[a2_i] > array1[a1_i]
-      out_array << array1[a1_i]
-      a1_i += 1
-      p array1[a1_i]
-      p array2[a2_i]
-    end
-  end
-  return out_array
-end
-
-p merger(first_a, second_a)
 
 # 100 Coolio Array
 # in list Two Pointers

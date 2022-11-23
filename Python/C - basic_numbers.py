@@ -3,23 +3,7 @@
 # Description
 # Write a function that returns whether a given number is a prime number.
 
-
-
-
 # 6n + 1 or 6n – 1
-
-# def is_prime(number)
-#   primes = []
-#   core_5 = [2, 3, 5, 7, 11]
-
-
-
-# end
-
-
-
-
-
 
 
 
@@ -33,13 +17,6 @@
 # If the number is divisible by both 3 and 5, print out "FIZZBUZZ".
 
 
-# function fizzbuzz() {
-#   for (let i = 1; i <= 100; i++) {
-#     if (i % 5 === 0 && i % 3 === 0) {
-#       console.log("FIZZBUZZ");
-#     }
-#   }
-# }
 
 
 
@@ -55,38 +32,10 @@
 
 # 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, and so on until infinity...
 
-input = 9
+# input = 9
 # Output: 21 (as this is the 9th number of the Fibonacci Sequence)
 
-def fibonacci_2(count)
-  fib_array = [0, 1]
-  if count <= 1
-    return count
-  else
-    i = 0
-    total = 0
-    (count - 1).times do
-      fib_array << fib_array[i] + fib_array[i + 1]
-      i += 1
-    end
-    return fib_array[-1]
-  end
 
-
-end
-
-# p fibonacci_2(20)
-
-
-def fibonacci(count)
-  if count <= 1
-    return count
-  else
-    return fibonacci(count - 1) + fibonacci(count - 2)
-  end
-end
-
-# p fibonacci(20)
 
 
 
@@ -115,24 +64,6 @@ end
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 
-def sum_of_multiples(number)
-  total = 0
-  i = 3
-  while i < number
-    if i % 3 == 0 && i % 5 == 0
-      total += i
-    elsif i % 3 == 0 
-      total += i
-    elsif i % 5 == 0
-      total += i 
-    end
-    i += 1
-  end
-  return total
-end
-
-p sum_of_multiples(1000)
-
 
 
 # Collatz Conjecture
@@ -160,23 +91,7 @@ p sum_of_multiples(1000)
 
 # Resulting in 9 steps. So for input n = 12, the return value would be 9.
 
-def collatz(number)
-  if number == 1
-    return 3
-  end
-  counter = 0
-  until number == 1
-    if number % 2 == 0
-      number /= 2
-    else
-      number = (number * 3) + 1
-    end
-    counter += 1
-  end
-  return counter
-end
 
-# p collatz(361)
 
 # Largest Palindrome Product
 # in list Basic Numbers
